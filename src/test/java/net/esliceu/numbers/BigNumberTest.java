@@ -142,4 +142,9 @@ public class BigNumberTest {
         assertEquals(expected, primerBigNumber.compareTo(segonBigNumber));
     }
 
+    @Test
+    public void falla() {
+        assertEquals("1", "0");
+    }
+
 }
