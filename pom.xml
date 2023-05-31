@@ -22,9 +22,7 @@
         </dependency>
     </dependencies>
 
-
     <packaging>war</packaging>
-
 
     <build>
         <finalName>SayBigNumber</finalName>
@@ -36,6 +34,35 @@
                     <source>11</source>
                     <target>11</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.0.2155</version>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.7</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <formats>
+                                <format>XML</format>
+                            </formats>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -49,7 +76,6 @@
             </activation>
             <properties>
                 <tomcat.server>localhost</tomcat.server>
-                <!-- http://tomcat251.cfgs.esliceu.net:8080/fizzBuzz.jsp  -->
                 <tomcat.port>8080</tomcat.port>
                 <tomcat.path>/SayBigNumber</tomcat.path>
                 <tomcat.username>war-deployer</tomcat.username>

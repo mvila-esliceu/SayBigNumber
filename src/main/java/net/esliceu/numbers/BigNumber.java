@@ -52,8 +52,9 @@ public class BigNumber implements BigNumberOperator {
 
     }
 
-    public String add(BigNumber secondBigNumber) {
-        String secondBigNumberString = setBigNumbersToSameSize(secondBigNumber.bigNumberString);
+
+    public String add(BigNumberOperator secondBigNumber) {
+        String secondBigNumberString = setBigNumbersToSameSize(((BigNumber) secondBigNumber).bigNumberString);
         String result = "";
         carry = 0;
         int first;
@@ -79,8 +80,8 @@ public class BigNumber implements BigNumberOperator {
     }
 
 
-    public String subtract(BigNumber secondBigNumber) {
-        return addOrSubtract(setBigNumbersToSameSize(secondBigNumber.bigNumberString), SUBTRACT);
+    public String subtract(BigNumberOperator secondBigNumber) {
+        return addOrSubtract(setBigNumbersToSameSize(((BigNumber) secondBigNumber).bigNumberString), SUBTRACT);
     }
 
     private String addOrSubtract(String secondBigNumberString, int sign) {
@@ -127,6 +128,7 @@ public class BigNumber implements BigNumberOperator {
         }
         return number;
     }
+
 
 
 }
