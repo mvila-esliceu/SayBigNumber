@@ -35,6 +35,7 @@ public class SayBigNumberFactory {
                 throw new NumbersException("Invalid operation");
         }
 
+
         return result;
     }
 
