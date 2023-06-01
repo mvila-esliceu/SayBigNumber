@@ -23,8 +23,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Build with Maven
-    run: mvn clean install sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=mvila-esliceu -D
-sonar.login=b36a6f9a1c5cdfe82e1d7951fc1ec1556336e2b6
+    run: mvn clean install sonar:sonar
 
       
     - name: Upload artifact
