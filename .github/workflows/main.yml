@@ -23,7 +23,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Build with Maven
-    run: mvn clean install sonar:sonar
+      run: mvn clean install sonar:sonar
 
       
     - name: Upload artifact
