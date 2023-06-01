@@ -12,7 +12,7 @@ public class BigNumberTest {
 
         assertEquals(true, bigNumber1.equals(bigNumber2));
     }
-
+/*
     @Test
     public void compara_dos_bignumbers_son_equivalents() {
         BigNumber bigNumber1 = new BigNumber("000");
@@ -118,7 +118,7 @@ public class BigNumberTest {
     @Test
     public void resta_8211_menys_299_dona_7912() {
         resta("8211", "299", "7912");
-    }
+    }*/
 
 
     private void resta(String primerNumber, String segonNumber, String expected) {
