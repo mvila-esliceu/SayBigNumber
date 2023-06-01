@@ -28,7 +28,7 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.organization>mvila-esliceu</sonar.organization>
         <sonar.login>b36a6f9a1c5cdfe82e1d7951fc1ec1556336e2b6</sonar.login>
-        <sonar.projectName>SayBigNumber</sonar.projectName>
+        <!-- sonar.projectName>SayBigNumber</sonar.projectName  -->
         <sonar.sources>src/main/java</sonar.sources>
         <sonar.tests>src/test/java</sonar.tests>
         <sonar.coverageReportPaths>target/site/jacoco/jacoco.xml</sonar.coverageReportPaths>
