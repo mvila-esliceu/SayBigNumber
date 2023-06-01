@@ -22,10 +22,11 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
-
-
-    - name: Get actions dir path
-      uses: michmich112/get-actions-dir-path@v0.0.2
+    - name: Display current path
+      run: pwd
+      
+    - name: List dir contents
+      run: ls -la
 
     - name: Build with Maven
       run: mvn clean install sonar:sonar
