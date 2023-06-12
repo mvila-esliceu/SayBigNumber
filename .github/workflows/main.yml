@@ -40,7 +40,7 @@ jobs:
         port: 25122
         host: ssh.cfgs.esliceu.net
         origin: target/SayBigNumber.war
-        destination: /tmp
+        destination: /tmp/.
         #destination: /var/lib/tomcat9/webapps/
         username: root
         password: Entorns2023!
