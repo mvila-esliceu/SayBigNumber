@@ -25,16 +25,9 @@ jobs:
     - name: Build with Maven
       run: mvn clean package #install sonar:sonar
 
-
-    #- name: Upload artifact
-      #uses: actions/upload-artifact@v3
-      #with:
-        #name: jacoco
-        #path: target/site/jacoco/jacoco.xml
-
   deploy:
-    depends: build
-    runs-on: ubuntu-latest   # Adjust the runner as needed
+    needs: build
+    runs-on: ubuntu-latest   # Adjust the runner as needed  
 
     steps:
       - name: Install SCP
