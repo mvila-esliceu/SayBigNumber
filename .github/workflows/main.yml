@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: list target
-        run: ls -la target
+        run: ls -la
         
       #- name: Install SCP
         #run: apt-get install -y scp    # Install SCP on the runner
