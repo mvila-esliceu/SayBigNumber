@@ -22,15 +22,14 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
+    - name: Build with Maven
+      run: mvn clean package sonar:sonar
+      
     - name: Display current path
       run: pwd
       
     - name: List dir contents
       run: ls -la
-
-    - name: Build with Maven
-      run: mvn clean install sonar:sonar
-
       
     - name: Upload artifact
       uses: actions/upload-artifact@v3
