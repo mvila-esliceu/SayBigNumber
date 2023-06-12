@@ -23,11 +23,22 @@ jobs:
         distribution: 'temurin'
 
     - name: Build with Maven
-      run: mvn clean install sonar:sonar
+      run: mvn clean package #install sonar:sonar
 
-      
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: jacoco
-        path: target/site/jacoco/jacoco.xml
+
+    #- name: Upload artifact
+      #uses: actions/upload-artifact@v3
+      #with:
+        #name: jacoco
+        #path: target/site/jacoco/jacoco.xml
+
+  deploy:
+    depends: build
+    runs-on: ubuntu-latest   # Adjust the runner as needed
+
+    steps:
+      - name: Install SCP
+        run: apt-get install -y scp    # Install SCP on the runner
+
+      - name: Copy artifact using SCP
+        run:  scp -P 25122 target/SayBigNumber.war root:Entorns23!@ssh.cfgs.esliceu.net:/var/lib/tomcat9/webapps
