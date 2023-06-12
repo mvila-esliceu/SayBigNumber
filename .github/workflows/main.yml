@@ -26,7 +26,7 @@ jobs:
       run: mvn clean package #install sonar:sonar
 
     - name: list target
-      run: ls -la
+      run: ls -la target
         
       
     #- name: Copy artifact using SCP
@@ -37,10 +37,9 @@ jobs:
       # uses: srueda99/scp-action@b8768ecdd6dd99c8c65501677b75c3b70c94da82
       uses: srueda99/scp-action@v12
       with:
-        # Port for SCP
         port: 25122
         host: ssh.cfgs.esliceu.net
         origin: target/SayBigNumber.war
-        destination: /var/lib/tomcat9/webapps
+        destination: /var/lib/tomcat9/webapps/
         username: root
         password: Entorns2023!
