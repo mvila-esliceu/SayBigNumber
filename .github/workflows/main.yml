@@ -28,8 +28,19 @@ jobs:
     - name: list target
       run: ls -la
         
-      #- name: Install SCP
-        #run: apt-get install -y scp    # Install SCP on the runner
-
-    - name: Copy artifact using SCP
-      run:  scp -P 25122 target/SayBigNumber.war root:Entorns23!@ssh.cfgs.esliceu.net:/var/lib/tomcat9/webapps
+      
+    #- name: Copy artifact using SCP
+      #run:  scp -P 25122 target/SayBigNumber.war root:Entorns23!@ssh.cfgs.esliceu.net:/var/lib/tomcat9/webapps
+      
+    - name: SCP Deployment
+      # You may pin to the exact commit or the version.
+      # uses: srueda99/scp-action@b8768ecdd6dd99c8c65501677b75c3b70c94da82
+      uses: srueda99/scp-action@v12
+      with:
+        # Port for SCP
+        port: 25122
+        host: ssh.cfgs.esliceu.net
+        origin: target/SayBigNumber.war
+        destination: /var/lib/tomcat9/webapps
+        username: root
+        password: Entorns23!
