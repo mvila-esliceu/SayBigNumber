@@ -30,6 +30,9 @@ jobs:
     runs-on: ubuntu-latest   # Adjust the runner as needed  
 
     steps:
+      - name: list target
+        run: ls -la target
+        
       - name: Install SCP
         run: apt-get install -y scp    # Install SCP on the runner
 
