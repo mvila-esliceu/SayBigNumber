@@ -25,16 +25,11 @@ jobs:
     - name: Build with Maven
       run: mvn clean package #install sonar:sonar
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: list target
-        run: ls -la
+    - name: list target
+      run: ls -la
         
       #- name: Install SCP
         #run: apt-get install -y scp    # Install SCP on the runner
 
-      - name: Copy artifact using SCP
-        run:  scp -P 25122 target/SayBigNumber.war root:Entorns23!@ssh.cfgs.esliceu.net:/var/lib/tomcat9/webapps
+    - name: Copy artifact using SCP
+      run:  scp -P 25122 target/SayBigNumber.war root:Entorns23!@ssh.cfgs.esliceu.net:/var/lib/tomcat9/webapps
