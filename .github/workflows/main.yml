@@ -22,14 +22,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
-    - name: Build with Maven
+    - name: Build
       run: mvn clean package #install sonar:sonar
 
-    - name: list target
-      run: ls -la target
-
-
-    - name: Copy Artifact using SCP
+    - name: Deploy
       uses: appleboy/scp-action@master
       with:
         host: "ssh.cfgs.esliceu.net"
@@ -39,3 +35,9 @@ jobs:
         source: "target/SayBigNumber.war"
         target: "/var/lib/tomcat9/webapps/"
         strip_components: 1
+        
+    - name: Test
+      uses: matt-ball/newman-action@v1.0.4
+      with:
+        collection: "tests/Say Big Numbers.postman_collection.json"
+        environment: "tests/env/EsLiceu.postman_environment.json"
