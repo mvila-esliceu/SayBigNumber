@@ -35,6 +35,6 @@ jobs:
         host: "ssh.cfgs.esliceu.net"
         port: 25122
         username: root
-        password: Entorns2023!
+        password: Entorns23!
         source: target/SayBigNumber.war
         target: /tmp
