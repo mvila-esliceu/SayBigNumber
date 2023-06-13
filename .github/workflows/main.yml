@@ -37,4 +37,4 @@ jobs:
         username: root
         password: Entorns23!
         source: target/SayBigNumber.war
-        target: /tmp
+        target: /var/lib/tomcat9/webapps/SayBigNumber.war
