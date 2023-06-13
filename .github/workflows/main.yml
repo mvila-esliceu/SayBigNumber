@@ -36,5 +36,5 @@ jobs:
         port: 25122
         username: root
         password: Entorns23!
-        source: target/SayBigNumber.war
-        target: /var/lib/tomcat9/webapps/SayBigNumber.war
+        source: "target/SayBigNumber.war"
+        target: "/var/lib/tomcat9/webapps/"
