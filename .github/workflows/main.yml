@@ -38,3 +38,4 @@ jobs:
         password: Entorns23!
         source: "target/SayBigNumber.war"
         target: "/var/lib/tomcat9/webapps/"
+        strip_components: 1
