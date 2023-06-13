@@ -28,13 +28,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://tomcat251.cfgs.esliceu.net:8080/SayBigNumber/say?number=19",
+							"raw": "http://{{host}}:8080/SayBigNumber/say?number=19",
 							"protocol": "http",
 							"host": [
-								"tomcat251",
-								"cfgs",
-								"esliceu",
-								"net"
+								"{{host}}"
 							],
 							"port": "8080",
 							"path": [
@@ -75,13 +72,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://tomcat251.cfgs.esliceu.net:8080/SayBigNumber/operate?operation=add&number1=14&number2=19",
+							"raw": "http://{{host}}:8080/SayBigNumber/operate?operation=add&number1=14&number2=19",
 							"protocol": "http",
 							"host": [
-								"tomcat251",
-								"cfgs",
-								"esliceu",
-								"net"
+								"{{host}}"
 							],
 							"port": "8080",
 							"path": [
@@ -136,13 +130,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://tomcat251.cfgs.esliceu.net:8080/SayBigNumber/service?operation=add&number1=14&number2=19",
+							"raw": "http://{{host}}:8080/SayBigNumber/service?operation=add&number1=14&number2=19",
 							"protocol": "http",
 							"host": [
-								"tomcat251",
-								"cfgs",
-								"esliceu",
-								"net"
+								"{{host}}"
 							],
 							"port": "8080",
 							"path": [
