@@ -149,7 +149,7 @@
                         <version>3.0.0</version>
                         <configuration>
                             <scpExecutable>scp</scpExecutable> <!-- Path to the scp executable -->
-                            <url>scp://ssh.cfgs.esliceu.net:25122/var/lib/tomcat9/webapps</url> <!-- Destination directory on the local Tomcat server -->
+                            <url>scp://root@ssh.cfgs.esliceu.net:25122/var/lib/tomcat9/webapps</url> <!-- Destination directory on the local Tomcat server -->
                             <!--username>root</username  --> <!-- SSH username -->
                             <!-- password>your_password</password-->
                         </configuration>
